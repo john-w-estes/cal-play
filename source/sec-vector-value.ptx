@@ -14,19 +14,38 @@
     <p>To plot <m>r(t)</m>, use <c>ParametricPlot[ ]</c> as follows 
         <c>ParametricPlot[r[t],{t,0,5Pi}]</c>. Similarly, we find the derivative by 
         <c>D[r[t],t]</c>, and the integral with <c>Integrate[r[t],t]</c>.  </p>
+ 
 
     <example>
-        Try graphing the following using <c>ParametricPlot[ ]</c>:
+        <p>Try graphing the following using <c>ParametricPlot[ ]</c>: </p>
 
-    \begin{enumerate}[(a.)]
-        \item $r(t) = \la e^{\cos{3\theta}},  e^{-\sin{t}} \ra$
+        <p>
+        <m> r(t) = \lt e^{\cos(3\theta)},  e^{-\sin{t}} \gt </m> </p>
 
-       
+        <p>
+        <m> r(t) = \lt 2-\sin(2t), 3 + 2\cos{t} \gt </m> </p>
 
-        \item $r(t) = \la 2-\sin(2t), 3 + 2\cos{t} \ra$
-
-        
-    
-    \end{enumerate}
     </example>
+
+    <example>
+      <p>Graph the curve with parametric equations <m>x = \sqrt{1-0.25\cos^2{10t}}\cos{t} </m>, 
+      <m>y = \sqrt{1-0.25\cos^2{10t}}\sin{t}</m>, and <m>z = 0.5\cos{10t}</m>. </p>
+
+     <p> Explain the appearance of the graph by showing it lies on a sphere. You can do so by converting to 
+      spherical coordinates, plot with <c>SphericalPlot[ ]</c>, and then plot them together with 
+      the <c> Show[plot1, plot2]</c> function. </p>
+
+    </example>
+
+    <example>
+     <p> Consider the function <m> r(t) = (50e^{-t}\cos{t})\textbf{i} + 50e^{-t}\sin{t})\textbf{i} + (5 - 5e^{-t})\textbf{k}</m>. </p>
+
+    <p> What is the initial point of the path corresponding to <m>r(0)</m>? </p>
+
+    <p> What is <m>\lim_{t \rightarrow \infty} r(t) </m>? </p>
+
+    <p> Plot the curve. (Use ParametricPlot3D.) </p>
+
+    </example>
+
 </section>
