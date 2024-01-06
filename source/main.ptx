@@ -5,14 +5,17 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Multivariate Calculus Playground</title>
+    <subtitle>Mathematica Lessons for Calculus</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
     <xi:include href="./ch-chapter-title.ptx" />
+
+    <!-- Include chapters -->
+    <xi:include href="./ch-vector-value.ptx" />
 
 
     <!-- Include backmatter -->
