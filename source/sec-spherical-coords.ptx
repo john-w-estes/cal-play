@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-spherical-coords" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Spherical Coordinates</title>
+
+  <p> It is not always easy to visualize functions with spherical coordinates.
+    Thankully Mathematica makes it easy with <c>SphericalPlot[ ]</c>. We just need 
+    a function <m>\rho(\theta, \phi)</m> determined by angles <m>\theta</m> and
+    <m>phi</m>. Let's try one. </p>
+
+    <p>
+      <c>SphericalPlot3D[Sin[Theta]^2*Cos[Phi]-Sin[Phi],{Theta,-2Pi,2Pi},{Phi,0,Pi}]</c>
+    </p>
+
+    <figure>
+        <image source="MakerCampus_Logo (3).jpg" width="50%" />
+    </figure>
+
+    <example>
+        <title>Spherical Plots</title>
+        <statement>
+          <p>
+            Try graphing the following using <c>ParametricPlot[ ]</c>: 
+        
+            <m>r(t) = \lt e^{\cos{3\theta}},  e^{-\sin{t}} \gt </m> 
+               
+            <m> r(t) = \lt 2-\sin(2t), 3 + 2\cos{t} \gt </m>
+        </p>
+          
+        </statement>
+        <answer>
+          <p>
+            <m>f'(x) = 15x^4-7</m>
+          </p>
+        </answer>
+        <solution>
+          <p>
+            We use the power, sum,
+            and constant multiple rules and find that the derivative is <m>f'(x) = 15x^4-7</m>.
+          </p>
+        </solution>
+      </example>
+
+    <example>
+        <title>Differentiating a polynomial</title>
+        <statement>
+          <p>
+            Write a Mathematica function that converts rectangular 
+            coordinates to spherical coordinates. Then use your function to
+             convert the following coordinates to spherical coordinates.
+
+             <m> (-1,3,4) </m>
+
+             <m>(\sqrt{3}, -3, 2)</m>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f'(x) = 15x^4-7</m>
+          </p>
+        </answer>
+        <solution>
+          <p>
+            We use the power, sum,
+            and constant multiple rules and find that the derivative is <m>f'(x) = 15x^4-7</m>.
+          </p>
+        </solution>
+      </example>
+
+    <p> The "bumpy sphere” with an equation in spherical coordinates is  
+        <m>\rho = a+b\cos(m\theta)sin(n\phi)</m>, with  <m>\theta \in [0, 2\phi]</m> 
+        and <m>\phi \in [0,\pi]</m>,  where  <m>a</m> and  <m>b</m>  are positive 
+        numbers and  <m>m</m>  and  <m>n</m>  are positive integers, may be used in 
+        applied mathematics to model tumor growth.
+    </p>
+    
+      <exercise>
+       Plot the bumpy sphere with <m>a = 14, b =2</m>, and <m>n = 6</m> along with the 
+       sphere <m>\rho = a + b</m>.
+      </exercise>
+</section>

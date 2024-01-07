@@ -8,6 +8,9 @@
   </introduction>
 
   <!-- include sections -->
+  <xi:include href="sec-spherical-coords.ptx" />
+
+  <!-- include sections -->
   <xi:include href="sec-vector-value.ptx" />
 
   
