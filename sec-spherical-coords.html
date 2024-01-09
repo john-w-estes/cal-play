@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Vector Valued Functions</title>
+<title>Spherical Coordinates</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-spherical-coords.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-vector-valued-functions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-vector-valued-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-vector-valued-functions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-vector-value.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -119,31 +119,38 @@ window.MathJax = {
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-vector-valued-functions.html" class="internal"><span class="codenumber">1</span> <span class="title">Vector-Valued Functions</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-spherical-coords.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Spherical Coordinates</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-vector-value.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vector Valued Functions</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-spherical-coords.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Spherical Coordinates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-value.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vector Valued Functions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-vector-value"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Vector Valued Functions</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-spherical-coords"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Spherical Coordinates</span>
 </h2>
-<div class="para" id="sec-vector-value-2">Mathematica makes vector-valued functions as simple as an other function. We just need to use a parameter (like <span class="process-math">\(t\)</span>) for the input, and a vector as the output.</div>
-<div class="para" id="sec-vector-value-3">For example, let’s plot, differentiate, and integrate the function <span class="process-math">\(r(t) = \cos(t)\textbf{i} + \frac{1}{2}\sqrt{t}\sin{t}\textbf{j}\text{.}\)</span> First we define the function <code class="code-inline tex2jax_ignore">r[t_]:= {Cos[t], .5Sqrt[t]*Sin[t]}</code>.</div>
-<div class="para" id="sec-vector-value-4">To plot <span class="process-math">\(r(t)\text{,}\)</span> use <code class="code-inline tex2jax_ignore">ParametricPlot[ ]</code> as follows <code class="code-inline tex2jax_ignore">ParametricPlot[r[t],{t,0,5Pi}]</code>. Similarly, we find the derivative by <code class="code-inline tex2jax_ignore">D[r[t],t]</code>, and the integral with <code class="code-inline tex2jax_ignore">Integrate[r[t],t]</code>.</div>
-<details id="sec-vector-value-5" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="sec-vector-value-5-1">Try graphing the following using <code class="code-inline tex2jax_ignore">ParametricPlot[ ]</code>:</div> <div class="para" id="sec-vector-value-5-2"><span class="process-math">\(r(t) = \lt e^{\cos(3\theta)},  e^{-\sin{t}} \gt \)</span></div> <div class="para" id="sec-vector-value-5-3"><span class="process-math">\(r(t) = \lt 2-\sin(2t), 3 + 2\cos{t} \gt \)</span></div></article></details><details id="sec-vector-value-6" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="sec-vector-value-6-1">Graph the curve with parametric equations <span class="process-math">\(x = \sqrt{1-0.25\cos^2{10t}}\cos{t} \text{,}\)</span> <span class="process-math">\(y = \sqrt{1-0.25\cos^2{10t}}\sin{t}\text{,}\)</span> and <span class="process-math">\(z = 0.5\cos{10t}\text{.}\)</span>
-</div> <div class="para" id="sec-vector-value-6-2">Explain the appearance of the graph by showing it lies on a sphere. You can do so by converting to spherical coordinates, plot with <code class="code-inline tex2jax_ignore">SphericalPlot[ ]</code>, and then plot them together with the <code class="code-inline tex2jax_ignore"> Show[plot1, plot2]</code> function.</div></article></details><details id="sec-vector-value-7" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h3></summary><article class="example example-like"><div class="para" id="sec-vector-value-7-1">Consider the function <span class="process-math">\(r(t) = (50e^{-t}\cos{t})\textbf{i} + 50e^{-t}\sin{t})\textbf{i} + (5 - 5e^{-t})\textbf{k}\text{.}\)</span>
-</div> <div class="para" id="sec-vector-value-7-2">What is the initial point of the path corresponding to <span class="process-math">\(r(0)\text{?}\)</span>
-</div> <div class="para" id="sec-vector-value-7-3">What is <span class="process-math">\(\lim_{t \rightarrow \infty} r(t) \text{?}\)</span>
-</div> <div class="para" id="sec-vector-value-7-4">Plot the curve. (Use ParametricPlot3D.)</div></article></details></section></div>
+<div class="para" id="sec-spherical-coords-2">It is not always easy to visualize functions with spherical coordinates. Thankully Mathematica makes it easy with <code class="code-inline tex2jax_ignore">SphericalPlot[ ]</code>. We just need a function <span class="process-math">\(\rho(\theta, \phi)\)</span> determined by angles <span class="process-math">\(\theta\)</span> and <span class="process-math">\(phi\text{.}\)</span> Let’s try one.</div>
+<div class="para" id="sec-spherical-coords-3"><code class="code-inline tex2jax_ignore">SphericalPlot3D[Sin[Theta]^2*Cos[Phi]-Sin[Phi],{Theta,-2Pi,2Pi},{Phi,0,Pi}]</code></div>
+<figure class="figure figure-like" id="sec-spherical-coords-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/MakerCampus_Logo%20(3).jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><details id="sec-spherical-coords-5" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Spherical Plots.</span>
+</h3></summary><article class="example example-like"><div class="para" id="sec-spherical-coords-5-2-1">Try graphing the following using <code class="code-inline tex2jax_ignore">ParametricPlot[ ]</code>: <span class="process-math">\(r(t) = \lt e^{\cos{3\theta}},  e^{-\sin{t}} \gt \)</span> <span class="process-math">\(r(t) = \lt 2-\sin(2t), 3 + 2\cos{t} \gt \)</span>
+</div>
+<div class="solutions">
+<details id="sec-spherical-coords-5-3" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="sec-spherical-coords-5-3-1"><span class="process-math">\(f'(x) = 15x^4-7\)</span></div></div></details><details id="sec-spherical-coords-5-4" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="sec-spherical-coords-5-4-1">We use the power, sum, and constant multiple rules and find that the derivative is <span class="process-math">\(f'(x) = 15x^4-7\text{.}\)</span>
+</div></div></details>
+</div></article></details><details id="sec-spherical-coords-6" class="example example-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiating a polynomial.</span>
+</h3></summary><article class="example example-like"><div class="para" id="sec-spherical-coords-6-2-1">Write a Mathematica function that converts rectangular coordinates to spherical coordinates. Then use your function to convert the following coordinates to spherical coordinates. <span class="process-math">\((-1,3,4) \)</span> <span class="process-math">\((\sqrt{3}, -3, 2)\)</span>
+</div>
+<div class="solutions">
+<details id="sec-spherical-coords-6-3" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="sec-spherical-coords-6-3-1"><span class="process-math">\(f'(x) = 15x^4-7\)</span></div></div></details><details id="sec-spherical-coords-6-4" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="sec-spherical-coords-6-4-1">We use the power, sum, and constant multiple rules and find that the derivative is <span class="process-math">\(f'(x) = 15x^4-7\text{.}\)</span>
+</div></div></details>
+</div></article></details><div class="para" id="sec-spherical-coords-7">The "bumpy sphere” with an equation in spherical coordinates is <span class="process-math">\(\rho = a+b\cos(m\theta)sin(n\phi)\text{,}\)</span> with  <span class="process-math">\(\theta \in [0, 2\phi]\)</span> and <span class="process-math">\(\phi \in [0,\pi]\text{,}\)</span>  where  <span class="process-math">\(a\)</span> and  <span class="process-math">\(b\)</span>  are positive numbers and  <span class="process-math">\(m\)</span>  and  <span class="process-math">\(n\)</span>  are positive integers, may be used in applied mathematics to model tumor growth.</div>
+<details id="sec-spherical-coords-8" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><span class="process-math">\(a = 14, b =2\)</span><span class="process-math">\(n = 6\)</span><span class="process-math">\(\rho = a + b\)</span></article></details></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-spherical-coords.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-vector-valued-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-vector-value.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
